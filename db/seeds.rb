@@ -7,3 +7,85 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Place.create!(
+  [
+    {
+      trip_id: 1,
+      address: "123 Main St, Anytown, USA",
+      name: "Central Park",
+      description: "A large public park in the center of the city.",
+      image_url: "https://example.com/images/central_park.jpg",
+      start_time: DateTime.parse("2024-08-01 10:00:00"),
+      end_time: DateTime.parse("2024-08-01 12:00:00")
+    },
+    {
+      trip_id: 1,
+      address: "456 Elm St, Anytown, USA",
+      name: "City Museum",
+      description: "A museum showcasing the history of the city.",
+      image_url: "https://example.com/images/city_museum.jpg",
+      start_time: DateTime.parse("2024-08-01 13:00:00"),
+      end_time: DateTime.parse("2024-08-01 15:00:00")
+    },
+    {
+      trip_id: 2,
+      address: "789 Oak St, Anytown, USA",
+      name: "Science Center",
+      description: "A science center with interactive exhibits.",
+      image_url: "https://example.com/images/science_center.jpg",
+      start_time: DateTime.parse("2024-08-02 09:00:00"),
+      end_time: DateTime.parse("2024-08-02 11:00:00")
+    },
+    {
+      trip_id: 2,
+      address: "101 Maple St, Anytown, USA",
+      name: "Art Gallery",
+      description: "An art gallery featuring local artists.",
+      image_url: "https://example.com/images/art_gallery.jpg",
+      start_time: DateTime.parse("2024-08-02 12:00:00"),
+      end_time: DateTime.parse("2024-08-02 14:00:00")
+    },
+    {
+      trip_id: 3,
+      address: "202 Pine St, Anytown, USA",
+      name: "Botanical Garden",
+      description: "A botanical garden with a variety of plants.",
+      image_url: "https://example.com/images/botanical_garden.jpg",
+      start_time: DateTime.parse("2024-08-03 10:00:00"),
+      end_time: DateTime.parse("2024-08-03 12:00:00")
+    },
+    {
+      trip_id: 3,
+      address: "303 Cedar St, Anytown, USA",
+      name: "Aquarium",
+      description: "An aquarium with marine life exhibits.",
+      image_url: "https://example.com/images/aquarium.jpg",
+      start_time: DateTime.parse("2024-08-03 13:00:00"),
+      end_time: DateTime.parse("2024-08-03 15:00:00")
+    }
+  ]
+)
+
+Trip.create!(
+  [
+    {
+      user_id: 1,
+      image_url: "https://example.com/images/trip1.jpg",
+      start_time: DateTime.parse("2024-08-01 09:00:00"),
+      end_time: DateTime.parse("2024-08-01 18:00:00")
+    },
+    {
+      user_id: 2,
+      image_url: "https://example.com/images/trip2.jpg",
+      start_time: DateTime.parse("2024-08-02 09:00:00"),
+      end_time: DateTime.parse("2024-08-02 18:00:00")
+    },
+    {
+      user_id: 3,
+      image_url: "https://example.com/images/trip3.jpg",
+      start_time: DateTime.parse("2024-08-03 09:00:00"),
+      end_time: DateTime.parse("2024-08-03 18:00:00")
+    }
+  ]
+)
