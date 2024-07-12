@@ -20,4 +20,22 @@ class TripsController < ApplicationController
     render :show
   end
 
+  def update
+    @trip = Trip.find(params[:id])
+    @trip.update(
+      user_id: current_user.id || @trip.user_id,
+      title:  params[:title] || @trip.title,
+      image_url: params[:image_url] || @trip.image_url,
+      start_time: params[:start_time] || @trip.start_time,
+      end_time: params[:end_time] || @trip.end_time,
+      )
+    render :show
+  end
+
+  def destroy
+    @trip = Trip.find(params[:id])
+    @trip.delete
+    render json: {message: "Trip deleted"}
+  end
+
 end

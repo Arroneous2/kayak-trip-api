@@ -21,4 +21,24 @@ class PlacesController < ApplicationController
       )
     render :show
   end
+
+  def update
+    @place = Place.find(params[:id])
+    @place.update(
+      trip_id: params[:trip_id] || @place.trip_id,
+      address: params[:address] || @place.address,
+      name: params[:name] || @place.name,
+      description: params[:description] || @place.description,
+      image_url: params[:image_url] || @place.image_url,
+      start_time: params[:start_time] || @place.start_time,
+      end_time: params[:end_time] || @place.end_time
+      )
+    render :show
+  end
+
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+    render json: {message: "Place destroyed"}
+  end
 end
