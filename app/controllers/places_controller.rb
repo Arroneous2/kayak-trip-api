@@ -17,6 +17,7 @@ class PlacesController < ApplicationController
       description: params[:description],
       image_url: params[:image_url],
       start_time: params[:start_time],
+      end_time: params[:end_time],
       id: params[:id]
       )
     render :show
