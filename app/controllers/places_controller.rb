@@ -18,7 +18,8 @@ class PlacesController < ApplicationController
       image_url: params[:image_url],
       start_time: params[:start_time],
       end_time: params[:end_time],
-      id: params[:id]
+      lat: params[:lat],
+      long: params[:long],
       )
     render :show
   end
@@ -32,7 +33,9 @@ class PlacesController < ApplicationController
       description: params[:description] || @place.description,
       image_url: params[:image_url] || @place.image_url,
       start_time: params[:start_time] || @place.start_time,
-      end_time: params[:end_time] || @place.end_time
+      end_time: params[:end_time] || @place.end_time,
+      lat: params[:lat] || @place.lat,
+      long: params[:long] || @place.long
       )
     render :show
   end
