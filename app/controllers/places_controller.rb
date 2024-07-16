@@ -19,7 +19,7 @@ class PlacesController < ApplicationController
       start_time: params[:start_time],
       end_time: params[:end_time],
       lat: params[:lat],
-      long: params[:long],
+      lng: params[:lng],
       )
     render :show
   end
@@ -35,7 +35,7 @@ class PlacesController < ApplicationController
       start_time: params[:start_time] || @place.start_time,
       end_time: params[:end_time] || @place.end_time,
       lat: params[:lat] || @place.lat,
-      long: params[:long] || @place.long
+      lng: params[:lng] || @place.lng
       )
     render :show
   end
